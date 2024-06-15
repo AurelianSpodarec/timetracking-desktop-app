@@ -6,8 +6,8 @@ import icon from '../../../resources/icon.png?asset'
 
 function createSettingsWindow(): void {
   const settingsWindow = new BrowserWindow({
-    width: 400,
-    height: 300,
+    width: 770,
+    height: 570,
     show: false,
     autoHideMenuBar: true,
     ...(process.platform === 'linux' ? { icon } : {}),

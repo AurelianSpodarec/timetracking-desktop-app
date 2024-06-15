@@ -1,5 +1,6 @@
 import { useRoutes } from "react-router-dom"
-import SettingsTheming from "@renderer/windows/settings/Theming"
+import SettingsTheming from "@renderer/windows/settings/pages/Theming"
+import SettingsAdvanced from "./pages/Advanced"
 
 function CustomRoutes() {
   let routes = useRoutes([
@@ -7,6 +8,14 @@ function CustomRoutes() {
       path: "/",
       element: <SettingsTheming />
     },
+    {
+      path: "/theming",
+      element: <SettingsTheming />
+    },
+    {
+      path: "/advanced",
+      element: <SettingsAdvanced />
+    }
   ]);
 
   return routes;
