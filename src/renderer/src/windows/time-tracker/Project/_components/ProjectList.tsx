@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom"
-import dataProjects from "./data-projects"
-
+import dataProjects from "../data-projects"
 
 function ProjectExcerpt({ item }) {
   return (
@@ -14,20 +13,10 @@ function ProjectList() {
   return (
     <div>
       {dataProjects.map((project: any) => {
-        return <ProjectExcerpt item={project} />
+        return <ProjectExcerpt key={project.slug} item={project} />
       })}
     </div>
   )
 }
 
-
-function ProjectIndex() {
-  return (
-    <div>
-      ProjectsIndex
-      <ProjectList />
-    </div>
-  )
-}
-
-export default ProjectIndex
+export default ProjectList

@@ -1,13 +1,10 @@
-import ProjectIndex from "@renderer/views/pages/Project"
-import ProjectShow from "@renderer/views/pages/Project/show"
 import { useRoutes } from "react-router-dom"
+
+import ProjectIndex from "@renderer/windows/time-tracker/Project"
+import ProjectShow from "@renderer/windows/time-tracker/Project/show"
 
 function CustomRoutes() {
   let routes = useRoutes([
-    // {
-    //     path: "*",
-    //     element: <NotFound />
-    // },
     {
       path: "/",
       element: <ProjectIndex />
