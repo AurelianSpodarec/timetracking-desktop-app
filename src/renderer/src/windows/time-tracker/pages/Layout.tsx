@@ -43,6 +43,10 @@ function RootLayout() {
   function openSettingsWindow() {
     window.electron.ipcRenderer.send('open-settings-window');
   } 
+
+  function openDashboardWindow() {
+    window.electron.ipcRenderer.send('open-dashboard-window');
+  } 
   
   return (
     <div className="flex flex-col h-full overflow-hidden">
@@ -53,6 +57,8 @@ function RootLayout() {
         <CustomRoutes />
       </main>
       <footer className="">
+        
+        <button onClick={() => openDashboardWindow()}>Dashboard</button>
         <button onClick={() => openSettingsWindow()}>Settings</button>
       </footer>
     </div>

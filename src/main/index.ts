@@ -3,6 +3,7 @@ import { electronApp, optimizer } from '@electron-toolkit/utils'
 
 import { createMainWindow } from './windows/mainWindow'
 import { createSettingsWindow } from './windows/settingsWindow'
+import { createDashboardWindow } from './windows/dashboardWindow'
  
 
 app.whenReady().then(() => {
@@ -20,7 +21,14 @@ app.whenReady().then(() => {
     createSettingsWindow()
   })
 
+  ipcMain.on('open-dashboard-window', () => {
+    createDashboardWindow()
+  })
+
   createMainWindow()
+
+  // Other
+  // ======================================================
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
