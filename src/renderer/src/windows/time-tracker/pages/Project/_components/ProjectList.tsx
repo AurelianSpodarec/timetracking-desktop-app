@@ -1,11 +1,32 @@
 import { Link } from "react-router-dom"
 import dataProjects from "../../../data-projects"
 
-function ProjectExcerpt({ item }) {
+function ProjectTask({ item }) {
   return (
-    <Link to={`project/${item.slug}`} className="block py-20 bg-green-500">
+    <li>
       {item.name}
-    </Link>
+      {item.totalTime}
+    </li>
+  )
+}
+
+function ProjectTaskList({ item }) {
+  return (
+    <ol className="pl-10">
+      {item.tasks.map((task) => {
+        return <ProjectTask item={task} />
+      })}
+    </ol>
+  )
+}
+
+function ProjectExcerpt({ item }) {
+  console.log(item)
+  return (
+    <div className="block py-20 bg-green-500">
+      <span>{item.name}</span>
+      <ProjectTaskList item={item} />
+    </div>
   )
 }
 
