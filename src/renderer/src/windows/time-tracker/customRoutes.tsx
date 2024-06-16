@@ -1,7 +1,7 @@
 import { useRoutes } from "react-router-dom"
 
-import ProjectIndex from "@renderer/windows/time-tracker/Project"
-import ProjectShow from "@renderer/windows/time-tracker/Project/show"
+import ProjectIndex from "@renderer/windows/time-tracker/pages/Project"
+import ProjectShow from "@renderer/windows/time-tracker/pages/Project/show"
 
 function CustomRoutes() {
   let routes = useRoutes([

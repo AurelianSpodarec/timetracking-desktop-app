@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom"
-import dataProjects from "../data-projects"
+import dataProjects from "../../../data-projects"
 
 function ProjectExcerpt({ item }) {
   return (
-    <Link to={`project/${item.slug}`}>
+    <Link to={`project/${item.slug}`} className="block py-20 bg-green-500">
       {item.name}
     </Link>
   )

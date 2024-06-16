@@ -4,13 +4,12 @@ import { HashRouter } from 'react-router-dom'
 
 import "./../../styles/styles.scss";
 
-// import Layout from './windows/Layout'
-import CustomRoutes from './customRoutes'
+import RootLayout from './pages/Layout'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <HashRouter>
-      <CustomRoutes />
+     <RootLayout />
     </HashRouter>
   </React.StrictMode>
 )
